@@ -1,6 +1,6 @@
-####
-curl 127.0.0.1:4002 -d {"jsonrpc":"2.0","method":"screenshot_nb","params":{"id":321, "total_time":20, "interval_time":2, "room_url":"http://www.panda.tv/act/baozoumanhua20160824.html"},"id":200} -H "Content-Type:application/json"
-####
+#### 不带滚动网页的请求
+    curl 127.0.0.1:4002 -d {"jsonrpc":"2.0","method":"screenshot_nb","params":{"id":321, "total_time":20, "interval_time":2, "room_url":"http://www.panda.tv/act/baozoumanhua20160824.html"},"id":200} -H "Content-Type:application/json"
+#### 带滚动网页的请求
     curl  127.0.0.1:4002 -d '{"jsonrpc":"2.0","method":"screenshot_nb","params":{"id":321,"total_time":20,"interval_time":2,"scroll_top":"1000","room_url":"http://www.panda.tv/act/baozoumanhua20160824.html"},"id":200}' -H "Content-Type: application/json"
 [安装Image库指令]
 http://www.cnblogs.com/Ray-liang/p/5415033.html
