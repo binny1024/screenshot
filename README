@@ -1,0 +1,42 @@
+curl 127.0.0.1:4002 -d '{"jsonrpc":"2.0","method":"screenshot","params":[321,"http://www.panda.tv/act/baozoumanhua20160824.html",8],"id":0}' -H "Content-Type:application/json"
+
+curl 127.0.0.1:4002 -d {"jsonrpc":"2.0","method":"screenshot_nb","params":{"id":321, "total_time":20, "interval_time":2, "room_url":"http://www.panda.tv/act/baozoumanhua20160824.html"},"id":200} -H "Content-Type:application/json"
+
+[安装Image库指令]
+http://www.cnblogs.com/Ray-liang/p/5415033.html
+http://blog.csdn.net/c_boy_lu/article/details/49816039
+sudo apt-get install libjpeg-dev libpng12-dev libfreetype6-dev libtiff-dev
+pip install -I --no-cache-dir -v Pillow
+
+[安装Redis]
+sudo pip install redis
+
+[base]
+host = 127.0.0.1
+port = 4002
+chromeDriver = G://MyPython/screenshot/chromedriver
+#空默认项目地址,不为空最后要有'/'
+base_img_path = G://MyPython/screenshotimg/
+
+#截取的视频宽度
+img_width = 1900
+#截取的视频高度
+ima_heigh = 1600
+#视频加载时间
+video_load_time = 2
+#广告延时保护时间
+extend_time = 0
+#广告时间分水岭：广告时长<=10秒的，3秒截1次；广告时长>10秒的，按:广告时长X0.75（3/4间隔时间）
+ad_middle_time = 10
+#短广告截取图片间隔
+short_ad_space = 3
+#长广告截取图片系数
+long_ad_space = 0.75
+
+ad_server_tcp = http://
+ad_server_host = ad-xujianfeng.hub520.com
+
+redis_host = 127.0.0.1
+redis_post = 6379
+redis_db = 0
+pit_host = http://pic.xiaohulu.com

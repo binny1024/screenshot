@@ -1,0 +1,5 @@
+.vscode
+pit/*
+*.pyc
+*.log
+config.conf

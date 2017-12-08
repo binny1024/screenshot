@@ -1,0 +1,4 @@
+redis
+selenium
+json-rpc
+Werkzeug
