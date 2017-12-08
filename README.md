@@ -49,9 +49,9 @@
     不同版本的chromeDriver对应不同版本的chrome浏览器
     http://blog.csdn.net/qijingpei/article/details/68925392
 
-    chromedriver版本 	支持的Chrome版本
-    ----------------|--------------
-            v2.25   |    v53-55
+    chromedriver版本|	支持的Chrome版本
+     ---------------|--------------
+            v2.25   |   v53-55
             v2.24	|   v52-54
             v2.23	|   v51-53
             v2.22	|   v49-52
