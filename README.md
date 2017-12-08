@@ -2,11 +2,13 @@
     curl 127.0.0.1:4002 -d {"jsonrpc":"2.0","method":"screenshot_nb","params":{"id":321, "total_time":20, "interval_time":2, "room_url":"http://www.panda.tv/act/baozoumanhua20160824.html"},"id":200} -H "Content-Type:application/json"
 #### 带滚动网页的请求
     curl  127.0.0.1:4002 -d '{"jsonrpc":"2.0","method":"screenshot_nb","params":{"id":321,"total_time":20,"interval_time":2,"scroll_top":"1000","room_url":"http://www.panda.tv/act/baozoumanhua20160824.html"},"id":200}' -H "Content-Type: application/json"
-[安装Image库指令]
-http://www.cnblogs.com/Ray-liang/p/5415033.html
-http://blog.csdn.net/c_boy_lu/article/details/49816039
-sudo apt-get install libjpeg-dev libpng12-dev libfreetype6-dev libtiff-dev
-pip install -I --no-cache-dir -v Pillow
+#### [安装Image库指令]
+    http://www.cnblogs.com/Ray-liang/p/5415033.html
+    http://blog.csdn.net/c_boy_lu/article/details/49816039
+    sudo apt-get install libjpeg-dev libpng12-dev libfreetype6-dev libtiff-dev
+
+##### pip命令 进入到pip所在目录：我的是C:\Python\Scripts
+    pip install -I --no-cache-dir -v Pillow
 
 [安装Redis]
 sudo pip install redis
