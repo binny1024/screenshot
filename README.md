@@ -1,17 +1,18 @@
-#### 不带滚动网页的请求
+### curl 命令
+#### 不带滚动网页的请求(旧版)
     curl 127.0.0.1:4002 -d {"jsonrpc":"2.0","method":"screenshot_nb","params":{"id":321, "total_time":20, "interval_time":2, "room_url":"http://www.panda.tv/act/baozoumanhua20160824.html"},"id":200} -H "Content-Type:application/json"
-#### 带滚动网页的请求
+#### 带滚动网页的请求（新版）
     curl  127.0.0.1:4002 -d '{"jsonrpc":"2.0","method":"screenshot_nb","params":{"id":321,"total_time":20,"interval_time":2,"scroll_top":"1000","room_url":"http://www.panda.tv/act/baozoumanhua20160824.html"},"id":200}' -H "Content-Type: application/json"
 #### [安装Image库指令]
     http://www.cnblogs.com/Ray-liang/p/5415033.html
     http://blog.csdn.net/c_boy_lu/article/details/49816039
 ##### pip命令 进入到pip所在目录：我的是C:\Python\Scripts
     pip install -I --no-cache-dir -v Pillow
-
+#### python 3
 #### [安装Redis]
     python pip install redis
 #### 下面是配置信息，供 configparser 读取
-##### 拷贝出来到 config.ini（文件名与扩展名不限）文件中
+#### 新建 config.ini（文件名与扩展名不限）文件中
 
     [base]
     host = 127.0.0.1
@@ -42,3 +43,33 @@
     redis_post = 6379
     redis_db = 0
     pit_host = http://pic.xiaohulu.com
+
+###  不同版本的chromeDriver对应不同版本的chrome浏览器
+    http://blog.csdn.net/qijingpei/article/details/68925392
+    dog | bird | cat
+    ----|------|----
+    foo | foo  | foo
+    bar | bar  | bar
+    baz | baz  | baz
+    chromedriver版本	支持的Chrome版本
+    v2.25	|   v53-55
+    v2.24	|  	v52-54
+    v2.23	|   v51-53
+    v2.22	|  v49-52
+    v2.21	|  	v46-50
+    v2.20	|  	v43-48
+    v2.19	|  	v43-47
+    v2.18	|  	v43-46
+    v2.17	|  	v42-43
+    v2.13	|  	v42-45
+    v2.15	|  	v40-43
+    v2.14	|  	v39-42
+    v2.13	|  	v38-41
+    v2.12	|  	v36-40
+    v2.11	|  	v36-40
+    v2.10	|  	v33-36
+    v2.9	|  	v31-34
+    v2.8	|  	v30-33
+    v2.7	|  	v30-33
+    v2.6	|  	v29-32
+    v2.5	|  	v29-32
