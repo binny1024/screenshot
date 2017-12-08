@@ -10,10 +10,11 @@ import redis
 
 class ScreenShot(threading.Thread):
 
-    def __init__(self, task_id, room_url, dur, pit_path, interval_time, fn_list, rt_list):
+    def __init__(self, task_id, room_url, scroll_top, dur, pit_path, interval_time, fn_list, rt_list):
         threading.Thread.__init__(self)
         self.task_id = str(task_id)
         self.room_url = room_url
+        self.scroll_top = scroll_top
         self.dur = dur
         cp = configparser.ConfigParser()
         cp.read(r'G:/MyPython/screenshot/config.ini', encoding='utf-8')
@@ -42,7 +43,7 @@ class ScreenShot(threading.Thread):
             room_url = self.room_url
             print(room_url)
             browser.get(room_url)
-            js = "var q=document.documentElement.scrollTop=500"
+            js = "var q=document.documentElement.scrollTop="+self.scroll_top
             browser.execute_script(js)
             # browser.refresh();
             js = """

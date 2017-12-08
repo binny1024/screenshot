@@ -18,9 +18,9 @@ def foobar(**kwargs):
     return kwargs["foo"] + kwargs["bar"]
 
 
-def run_shell(task_id, room_url, dur, pit_path, interval_time, fn_list, rt_list):
+def run_shell(task_id, room_url,scroll_top, dur, pit_path, interval_time, fn_list, rt_list):
     # screenshot.capture(url)
-    ss = screenshot.ScreenShot(task_id, room_url, dur, pit_path, interval_time, fn_list, rt_list)
+    ss = screenshot.ScreenShot(task_id, room_url, scroll_top,dur, pit_path, interval_time, fn_list, rt_list)
     ss.start()
     return
 
@@ -48,8 +48,8 @@ def screenshot_nb(**kwargs):
     task_id = kwargs['id']
     interval_time = kwargs['interval_time']
     room_url = kwargs['room_url']
+    scroll_top = kwargs['scroll_top']
     total_time = kwargs['total_time']
-
     base_img_path = cp.get('base', 'base_img_path')
     current_date = time.strftime("%Y-%m-%d", time.localtime())
     current_time = time.strftime("%H-%M-%S", time.localtime())
@@ -63,7 +63,7 @@ def screenshot_nb(**kwargs):
 
     rt_list, at_list = gen_pits(base_path, task_id, total_time, interval_time)
 
-    run_shell(task_id, room_url, total_time, pit_path, interval_time, at_list, rt_list)
+    run_shell(task_id, room_url, scroll_top, total_time, pit_path, interval_time, at_list, rt_list)
     print(rt_list)
     return rt_list
 
