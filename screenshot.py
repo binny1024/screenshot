@@ -37,8 +37,13 @@ class ScreenShot(threading.Thread):
         global browser
         try:
             browser = webdriver.Chrome(self.cp.get('base', 'chromeDriver'))
-            browser.set_window_size(int(self.cp.get('base', 'img_width')), int(self.cp.get('base', 'ima_heigh')))
-            browser.get(self.room_url)
+            browser.set_window_size(int(self.cp.get('base', 'img_width')),  int(self.cp.get('base', 'ima_heigh')))
+
+            room_url = self.room_url
+            print(room_url)
+            browser.get(room_url)
+            js = "var q=document.documentElement.scrollTop=500"
+            browser.execute_script(js)
             # browser.refresh();
             js = """
                 (function () {
