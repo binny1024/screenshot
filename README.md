@@ -44,7 +44,8 @@
     redis_db = 0
     pit_host = http://pic.xiaohulu.com
 
-###  不同版本的chromeDriver对应不同版本的chrome浏览器
+###  chrome 不安全 data
+    不同版本的chromeDriver对应不同版本的chrome浏览器
     http://blog.csdn.net/qijingpei/article/details/68925392
 
     chromedriver版本	支持的Chrome版本
