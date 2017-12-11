@@ -43,8 +43,8 @@ class ScreenShot(threading.Thread):
             room_url = self.room_url
             print(room_url)
             browser.get(room_url)
-            js = "var q=document.documentElement.scrollTop="+self.scroll_top
-            browser.execute_script(js)
+            js_scroll_top = "var q=document.documentElement.scrollTop="+self.scroll_top
+            browser.execute_script(js_scroll_top)
             # browser.refresh();
             js = """
                 (function () {
@@ -82,6 +82,7 @@ class ScreenShot(threading.Thread):
             if not is_exists:
                 os.makedirs(dit_path)
 
+            # 屏幕暂停的时间
             time.sleep(self.interval_time)
 
             browser.execute_script(js)

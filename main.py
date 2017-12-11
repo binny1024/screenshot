@@ -18,7 +18,7 @@ def foobar(**kwargs):
     return kwargs["foo"] + kwargs["bar"]
 
 
-def run_shell(task_id, room_url,scroll_top, dur, pit_path, interval_time, fn_list, rt_list):
+def run_shell(task_id, room_url, scroll_top, dur, pit_path, interval_time, fn_list, rt_list):
     # screenshot.capture(url)
     ss = screenshot.ScreenShot(task_id, room_url, scroll_top,dur, pit_path, interval_time, fn_list, rt_list)
     ss.start()
